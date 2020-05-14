@@ -97,6 +97,7 @@ EventFrame:SetScript("OnEvent", function(self, event, ...)
     end
     
     if(event == "PLAYER_LEVEL_UP")then
+        local guildName = GetGuildInfo("player")
         if(guildName == "Stockholm Syndrome")then
             SendChatMessage("DING!", "GUILD")
         end
