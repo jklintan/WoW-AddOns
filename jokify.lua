@@ -129,8 +129,20 @@ SlashCmdList["JOKIFY"] = function(txt)
         end
     else
         if(targetName ~= nil) then
-            SendChatMessage(currJoke, "WHISPER", nil, GetUnitName("PLAYERTARGET"))
-            DoEmote("LAUGH")
+            if(playerName == "Hasenöhrl" or playerName == "Zweistein")then
+                if(targetName == "Farahwaynah")then
+                    SendChatMessage("Flexa är det enda skämt jag kan...", "WHISPER", nil, GetUnitName("PLAYERTARGET"))
+                    DoEmote("CRY")
+                end
+            elseif(playerName == "Farahwaynah")then
+                if(targetName == "Hasenöhrl" or targetName == "Zweistein")then
+                    SendChatMessage("Weird flex, butt okay", "WHISPER", nil, GetUnitName("PLAYERTARGET"))
+                    DoEmote("FLEX")
+                end
+            else
+                SendChatMessage(currJoke, "WHISPER", nil, GetUnitName("PLAYERTARGET"))
+                DoEmote("LAUGH")
+            end
         else
             print("JOKE TIME: ", currJoke)
             DoEmote("LAUGH")
