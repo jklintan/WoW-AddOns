@@ -117,16 +117,8 @@ SlashCmdList["JOKIFY"] = function(txt)
     local targetName = UnitName("target")
 
     if(UnitInParty("player"))then     
-        if(playerName == "Hasenöhrl" or playerName == "Zweistein")then
-            if(targetName ~= nil)then
-                if(targetName == "Farahwaynah")then
-                    print("Haha, skulle du vara roligare än Jossan?! Tror knappast det...")
-                    DoEmote("CRY")
-                end
-            end
-        else
-            SendChatMessage(currJoke, "PARTY")
-        end
+        SendChatMessage(currJoke, "PARTY")
+        DoEmote("LAUGH")
     else
         if(targetName ~= nil) then
             if(playerName == "Hasenöhrl" or playerName == "Zweistein")then
