@@ -1,0 +1,7 @@
+## Interface: 11302
+## Title: jokify
+## Notes: A place to tell the best jokes
+## Author: jklintan
+## Version: 1.0
+
+jokify.lua
