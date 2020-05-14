@@ -1,0 +1,62 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+	../UI.xsd">
+	<Button name="ButtonTemplate" virtual="true">
+		<Size x="25" y="25"/>
+		<Scripts>
+			<OnClick>
+				<!-- WowLua:Button_OnClick(self, button) -->
+			</OnClick>
+			<OnEnter>
+				<!-- WowLua:Button_OnEnter(self) -->
+			</OnEnter>
+			<OnLeave>
+				<!-- WowLua:Button_OnLeave(self) -->
+			</OnLeave>
+					<OnLeave>
+			jokify:OnClose();
+		</OnLeave>
+		</Scripts>
+	</Button>
+
+<Frame name="jokifyFrameStats" toplevel="true" hidden="true" movable="false" parent="UIParent" enableMouse="true" resizable="false" frameStrata="MEDIUM">
+</Frame>
+		<Frame name="jokifyFrame" toplevel="true" hidden="true" movable="false" parent="UIParent" enableMouse="true" resizable="false" frameStrata="MEDIUM">
+			<Button name="ConfigFilterButtonTemplate" inherits="ConfigCategoryButtonTemplate" virtual="true">
+			<text>Testing</text>
+		<Scripts>
+			<OnClick>
+				<!-- ChatConfigFilter_OnClick(self:GetID()+FauxScrollFrame_GetOffset(ChatConfigCombatSettingsFiltersScrollFrame)); -->
+			</OnClick>
+					<OnLeave>
+			jokify:OnClose();
+		</OnLeave>
+		</Scripts>
+	</Button>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+			<!-- <Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentBG1" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopBackground">
+					<Size x="256" y="64"/>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset x="13" y="-18"/>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				</Layer>
+				</Layers> -->
+
+		<OnEnable>
+			jokify:OnEnable();
+		</OnEnable>
+		<OnLoad>
+			jokify:OnLoad();
+		</OnLoad>
+
+		<OnLeave>
+			jokify:OnClose();
+		</OnLeave>
+		</Frame>
+</Ui>
