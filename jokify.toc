@@ -3,5 +3,7 @@
 ## Notes: A place to tell the best jokes
 ## Author: jklintan
 ## Version: 1.0
+## X-LoadOn-Slash: /jokify, /joke, /stats
 
 jokify.lua
+jokify.xml
