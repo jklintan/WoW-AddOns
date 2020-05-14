@@ -1,3 +1,11 @@
+--[[--------------------------------------------------------------------------
+  Copyright (c) 2020, Josefine Klintberg, jklintan.github.io
+  All rights reserved.
+
+  A fun plug-in for additional jokes and special guild easter eggs for
+  the guild Stockholm Syndrome
+--------------------------------------------------------------------------]]--
+
 if(jokify) then
     C_Timer.After(4, function() 
         error("ERROR!! -> jokify already loaded")
@@ -144,5 +152,4 @@ SlashCmdList["STATS"] = function(txt)
     else
         print("You are currently not in a guild...")
     end
-    --DEFAULT_CHAT_FRAME:AddMessage(numTotal .. " guild members: " .. numOnline .. " online, " .. (numTotal - numOnline) .. " offline.");
 end
