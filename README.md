@@ -11,7 +11,8 @@ The full functionality is added when belonging to the guild 'Stockholm Syndrome'
 
 ## Installing
 
-Install by downloading the zip-file for this repo, then unzip and move the entire folder into WorldOfWarcraft->_classic_->Interface->AddOns
+Install by downloading the zip-file for this repo, then unzip and move the entire folder into: 
+WorldOfWarcraft->_classic_->Interface->AddOns
 
 ## Statistics about guild
 
