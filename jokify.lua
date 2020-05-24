@@ -117,8 +117,16 @@ SlashCmdList["JOKIFY"] = function(txt)
     local targetName = UnitName("target")
 
     if(UnitInParty("player"))then     
-        SendChatMessage(currJoke, "PARTY")
-        DoEmote("LAUGH")
+        if(playerName == "Hasenöhrl" or playerName == "Zweistein")then
+            if(targetName ~= nil)then
+                if(targetName == "Farahwaynah")then
+                    print("Haha, skulle du vara roligare än Jossan?! Tror knappast det...")
+                    DoEmote("CRY")
+                end
+            end
+        else
+            SendChatMessage(currJoke, "PARTY")
+        end
     else
         if(targetName ~= nil) then
             if(playerName == "Hasenöhrl" or playerName == "Zweistein")then
@@ -142,7 +150,6 @@ SlashCmdList["JOKIFY"] = function(txt)
     end
 
     DEFAULT_CHAT_FRAME.editBox:Hide();
-    editBox:ClearFocus()
 end
 
 -- SHOW STATS ABOUT GUILD
