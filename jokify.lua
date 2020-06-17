@@ -68,6 +68,8 @@ EventFrame:RegisterEvent("MAIL_SHOW")
 EventFrame:RegisterEvent("PLAYER_DEAD")
 EventFrame:RegisterEvent("START_LOOT_ROLL")
 EventFrame:RegisterEvent("PLAYER_LEVEL_UP")
+EventFrame:RegisterEvent("PLAYER_LOGOUT")
+EventFrame:RegisterEvent("ADDON_LOADED")
 
 EventFrame:SetScript("OnEvent", function(self, event, ...)
     local playerName = UnitName("player")
@@ -78,6 +80,14 @@ EventFrame:SetScript("OnEvent", function(self, event, ...)
         if(guildName == "Stockholm Syndrome")
         then
             print("BÄSTA guilden dessutom")
+        end
+        if(levelUpMessage == "") then
+            print("You do not have any 'level up message' set. Set your custom level up message by typing /setlvlmsg followed by your custom level up message.")
+        end
+    end
+    if(event == "ADDON_LOADED") then
+        if(levelUpMessage == nil) then
+            levelUpMessage = "" -- if no level up message is set
         end
     end
     if(event == "MAIL_SHOW") then
@@ -98,8 +108,12 @@ EventFrame:SetScript("OnEvent", function(self, event, ...)
     
     if(event == "PLAYER_LEVEL_UP")then
         local guildName = GetGuildInfo("player")
-        if(guildName == "Stockholm Syndrome")then
-            SendChatMessage("DING!", "GUILD")
+        if(levelUpMessage ~= "") then
+            if(guildName ~= nil) then 
+                SendChatMessage(levelUpMessage, "GUILD")
+            else
+                print(levelUpMessage)
+            end
         end
     end
 end)
@@ -164,4 +178,19 @@ SlashCmdList["STATS"] = function(txt)
     else
         print("You are currently not in a guild...")
     end
+end
+
+-- DISPLAY LEVEL UP MESSAGE
+SLASH_LVLMSG1 = "/lvlmsg"
+SlashCmdList["LVLMSG"] = function(txt)
+    local text = "Current level up message is set to: " .. levelUpMessage
+    message(text)
+end
+
+-- SET LEVEL UP MESSAGE
+SLASH_SETLVLMSG1 = "/setlvlmsg"
+SlashCmdList["SETLVLMSG"] = function(txt)
+    levelUpMessage = txt
+    local text = "Your level up message is set to: " .. levelUpMessage
+    message(text)
 end

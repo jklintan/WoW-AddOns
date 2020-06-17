@@ -3,7 +3,8 @@
 ## Notes: A place to tell the best jokes
 ## Author: jklintan
 ## Version: 1.0
-## X-LoadOn-Slash: /jokify, /joke, /stats
+## X-LoadOn-Slash: /jokify, /joke, /stats, /lvlm, /setlvlmsg, /setlvlm
+## SavedVariables: levelUpMessage
 
 jokify.lua
 jokify.xml
