@@ -1,0 +1,9 @@
+## Interface: 11302
+## Title: jokify
+## Notes: A place to tell the best jokes
+## Author: jklintan
+## Version: 1.0
+## X-LoadOn-Slash: /jokify, /joke
+
+jokify.lua
+jokify.xml
