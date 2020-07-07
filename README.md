@@ -1,4 +1,8 @@
-# JOKIFY
+# WoW AddOns
+
+Some small AddOns that I've created for WoW classic, mostly based on internal jokes during dungeons and for testing coding in Lua. 
+
+## Jokify
 
 A small AddOn to WoW Classic that allows for some additional jokes when running the macros below:
 
@@ -9,7 +13,7 @@ A small AddOn to WoW Classic that allows for some additional jokes when running 
 
 The full functionality is added when belonging to the guild 'Stockholm Syndrome' that adds some internal jokes and easter eggs when playing in a party. 
 
-## Guild functionality
+## Guilder
 
 For additional guild functionality about statistics and a level up message that prints to the guild chat when the player levels up. The following macros are available. 
 ```
@@ -21,5 +25,5 @@ For additional guild functionality about statistics and a level up message that 
 
 ## Installing
 
-Install by downloading the zip-file for this repo, then unzip and move the entire folder into: 
+Install by downloading the zip-file for this repo, then unzip and move the entire folders into: 
 WorldOfWarcraft->_classic_->Interface->AddOns

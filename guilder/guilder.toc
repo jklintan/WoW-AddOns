@@ -1,0 +1,10 @@
+## Interface: 11302
+## Title: guilder
+## Notes: Guild stats and guild automatic chat
+## Author: jklintan
+## Version: 1.0
+## X-LoadOn-Slash: /stats, /lvlm, /setlvlmsg, /setlvlm
+## SavedVariables: levelUpMessage
+
+guilder.lua
+guilder.xml

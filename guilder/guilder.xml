@@ -1,0 +1,7 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+	../UI.xsd">
+	<Frame name="guilderFrameStats" toplevel="true" hidden="true" movable="false" parent="UIParent" enableMouse="true" resizable="false" frameStrata="MEDIUM">
+	</Frame>
+	<Frame name="guilderFrame" toplevel="true" hidden="true" movable="false" parent="UIParent" enableMouse="true" resizable="false" frameStrata="MEDIUM">
+	</Frame>
+</Ui>
